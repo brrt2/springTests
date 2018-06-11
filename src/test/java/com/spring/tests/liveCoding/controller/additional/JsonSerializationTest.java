@@ -1,4 +1,4 @@
-package com.spring.tests.liveCoding.controller;
+package com.spring.tests.liveCoding.controller.additional;
 
 
 import com.spring.tests.liveCoding.model.Book;

@@ -1,6 +1,5 @@
 package com.spring.tests.liveCoding.controller;
 
-
 import com.spring.tests.liveCoding.model.Book;
 import com.spring.tests.liveCoding.model.User;
 import com.spring.tests.liveCoding.service.BookService;
@@ -9,13 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/books")
-public class BookController {
+@RequestMapping(value = "/sample")
+public class SampleController {
 
     @Autowired
     private BookService bookService;

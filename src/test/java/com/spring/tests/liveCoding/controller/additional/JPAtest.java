@@ -1,4 +1,4 @@
-package com.spring.tests.liveCoding.controller;
+package com.spring.tests.liveCoding.controller.additional;
 
 import com.spring.tests.liveCoding.model.User;
 import com.spring.tests.liveCoding.repository.UserRepository;
@@ -23,10 +23,10 @@ public class JPAtest {
 
     @Test
     public void findByUsernameShouldReturnUser() {
-        this.entityManager.persist(new User("sboot"));
-        User user = this.repository.findByUsername("sboot");
+        this.entityManager.persist(new User("sample"));
+        User user = this.repository.findByUsername("sample");
 
-        assertThat(user.getUsername()).isEqualTo("sboot");
+        assertThat(user.getUsername()).isEqualTo("sample");
     }
 
 }

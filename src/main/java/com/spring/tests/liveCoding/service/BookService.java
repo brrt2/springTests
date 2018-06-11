@@ -11,18 +11,10 @@ public class BookService {
 
     private List<Book> listOfBooks = new ArrayList<>();
 
-
     public List<Book> getAllBooks() {
 
         return listOfBooks;
 
-
     }
-
-
-
-
-
-
 
 }
