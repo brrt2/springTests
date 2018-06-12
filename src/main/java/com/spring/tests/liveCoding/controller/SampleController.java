@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import java.net.URI;
 import java.util.List;
 
@@ -28,6 +29,14 @@ public class SampleController {
      return bookService.getAllBooks();
 
     }
+
+    @GetMapping(value = "/oneBook")
+    public Book getOneBook() {
+
+        return new Book("R.Kipling","Jungle Book",1894);
+    }
+
+
 
     @PostMapping("/addUser")
     public ResponseEntity<Void> addUser (@RequestBody User user) {

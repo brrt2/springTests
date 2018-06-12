@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -46,6 +45,18 @@ public class WebMvcTestController {
         this.mockMvc.perform(get("/sample/allBooks"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Jungle")));
+    }
+
+    @Test
+    public void shouldReturnHttp4xxAsWrongURLisProvided() throws Exception {
+
+        List<Book> testList = new ArrayList<>();
+        testList.add(new Book("R.Kipling", "Jungle Book", 1894));
+
+        given(bookService.getAllBooks()).willReturn(testList);
+
+        this.mockMvc.perform(get("/false"))
+                .andExpect(status().is4xxClientError());
     }
 
 }

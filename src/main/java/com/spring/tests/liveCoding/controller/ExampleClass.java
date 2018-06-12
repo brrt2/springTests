@@ -17,6 +17,9 @@ public class ExampleClass {
         this.exampleService2 = exampleService2;
     }
 
+    public ExampleClass() {
+    }
+
     public String getCombinedMessage() {
 
         return exampleService1.getMessage() + exampleService2.getMessage();

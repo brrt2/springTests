@@ -34,7 +34,7 @@ public class ControllerPostMethodTest {
     private MockMvc mockMvc;
 
     @Test
-    public void createStudentCourse() throws Exception {
+    public void shouldHaveCreatedStatus() throws Exception {
 
         User mockUser = new User("sampleUser");
 

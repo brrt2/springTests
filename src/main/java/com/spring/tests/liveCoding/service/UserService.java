@@ -11,6 +11,7 @@ public class UserService {
 
     private List<User> listOfUsers = new ArrayList<>();
 
+
     public User addUser(User user) {
 
         if(listOfUsers.add(user)) {

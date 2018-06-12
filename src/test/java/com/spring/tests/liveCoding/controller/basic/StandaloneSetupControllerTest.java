@@ -54,7 +54,7 @@ public class StandaloneSetupControllerTest {
 
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 
-        String expected = "[{\"author\":\"R.Kipling\",\"title\":\"Jungle Book\",\"yearPublished\":1905}]";
+        String expected = "[{\"author\":\"R.Kipling\",\"title\":\"Jungle Book\",\"yearPublished\":1894}]";
 
         JSONAssert.assertEquals(expected, result.getResponse()
                 .getContentAsString(), false);
